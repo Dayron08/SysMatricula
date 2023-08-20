@@ -1,0 +1,61 @@
+﻿.dataTables_filter 
+{
+    margin-bottom:1.3em;
+}
+.dataTables_paginate 
+{
+    margin-top:1.3em;
+}
+table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody > tr > th.dtr-control:before {
+    background-color: var(--color-2) !important;
+}
+
+div.dataTables_wrapper div.dataTables_length select option:hover {
+    background-color: var(--color-2) !important;
+    color: var(--color-l) !important;
+}
+.dtr-data 
+{
+    font-size:0.8em;
+}
+table 
+{
+    width: 100% !important;
+}
+
+@media only screen and (max-width:768px) 
+{
+    table thead tr th 
+    {
+        font-size: 0.8em;
+    }
+}
+@media only screen and (max-width:860px) {
+    .tb thead 
+    {
+        display:none;
+    }
+    .tb tr 
+    {
+        margin-bottom:8px;
+        display:block;
+    }
+    .tb
+    {
+        text-align:center;
+    }
+    .tb td 
+    {
+        display:block;
+        text-align:right;
+    }
+
+    .tb td::before
+    {
+        content:attr(data-label);
+        font-weight:bold;
+        float:left;
+    }
+
+}

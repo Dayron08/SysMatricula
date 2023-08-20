@@ -1,0 +1,373 @@
+﻿/*League Spartan Bold & Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Open+Sans:wght@400;600&display=swap');
+/*Shree Devanagari 714*/
+
+@font-face {
+    font-family: "Shree Devanagari 714";
+    src: url('../fonts/Shree\ Devanagari\ 714.ttf');
+}
+.det_PrecioPd {
+    text-align: right;
+    margin-right: -50px;
+    padding-left: 10px;
+    font-size: 0.95em !important;
+}
+
+.det_PrecioPd:disabled {
+    background: #fff;
+    border: none;
+    border-radius: 0px;
+}
+.btn-f {
+    --bs-btn-padding-x: 0.75rem;
+    --bs-btn-padding-y: 0.375rem;
+    --bs-btn-font-size: 1rem;
+    --bs-btn-font-weight: 400;
+    --bs-btn-line-height: 1.5;
+    --bs-btn-color: #212529;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-width: 1px;
+    --bs-btn-border-color: transparent;
+    --bs-btn-border-radius: 0.375rem;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075);
+    --bs-btn-disabled-opacity: 0.65;
+    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    display: inline-block;
+    padding: var(--bs-btn-padding-y) var(--bs-btn-padding-x);
+    font-family: var(--bs-btn-font-family);
+    font-size: var(--bs-btn-font-size);
+    font-weight: var(--bs-btn-font-weight);
+    line-height: var(--bs-btn-line-height);
+    color: var(--bs-btn-color);
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+    border-radius: var(--bs-btn-border-radius);
+}
+:root {
+    /*Paleta de colores*/
+    --color-w: #EAEDF7;
+    --color-d: #282e2c;
+    /*Azul Marino*/
+    --color-1: #164872;
+    /*Azul Base*/
+    --color-2: #193661;
+    /*Celeste */
+    --color-3: #6f9dd1;
+    /*Celeste Claro */
+    --color-4: #a0c2e6;
+    --titulo: 'League Spartan', sans-serif;
+    --sub-titulo: 'League Spartan', sans-serif;
+    --texto: 'Open Sans', sans-serif;
+    --texto-alternativo: 'Open Sans', sans-serif;
+    --sombra-1: 15px 14px 13px 0px rgba(0,0,0,0.1);
+    --sombra-2: 17px 12px 25px 0px rgba(0,0,0,0.2);
+    --sombra-3: 17px 12px 9px 0px rgba(0,0,0,0.3);
+    --efecto-200: all 200ms ease;
+    --efecto-300: all 300ms ease;
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--color-2);
+    --bs-btn-border-color: var(--color-2);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--color-2);
+    --bs-btn-hover-border-color: var(--color-2);
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--color-2);
+    --bs-btn-active-border-color: var(--color-2);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--color-2);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--color-2);
+    --bs-gradient: none;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*ScroolBar*/
+body::-webkit-scrollbar {
+    width: 8px; /* Tamaño del scroll en vertical */
+    height: 7px; /* Tamaño del scroll en vertical */
+}
+body::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 7px;
+}
+body::-webkit-scrollbar-thumb:hover {
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+body::-webkit-scrollbar-thumb:active {
+        background-color: #999999;
+
+}
+body::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+body::-webkit-scrollbar-track:hover,
+body::-webkit-scrollbar-track:active {
+        background: #d4d4d4;
+    }
+/* Tipografia*/
+* {
+    font-family: var(--texto);
+    line-height: 1.5;
+}
+#passEye {
+    cursor: pointer;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--titulo);
+}
+
+.titulo {
+    font-weight: 700;
+}
+.text-num 
+{
+    text-align:left;
+}
+.text-bold {
+    font-family: var(--texto-alternativo);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--texto-alternativo);
+    font-weight: 600;
+    transition: var(--efecto-200);
+    font-size: 1em;
+}
+
+    a.link:hover {
+        font-size: 0.95em;
+    }
+    a.btn:hover {
+        font-size: 1em;
+    }
+    a.btn-sm:hover {
+        transform: translateY(0px) !important;
+        font-size: 0.875rem;
+    }
+
+.text-n {
+    font-family: var(--texto);
+}
+
+.text-a {
+    font-family: var(--texto-alternativo);
+}
+/* Colores */
+.bg-l {
+    background-color: var(--color-w);
+}
+
+.bg-d {
+    background-color: var(--color-d);
+    color: var(--color-w);
+}
+
+.bg-1 {
+    background-color: var(--color-1);
+    color: var(--color-w);
+}
+
+.bg-2 {
+    background-color: var(--color-2);
+    color: var(--color-w);
+}
+
+.bg-3 {
+    background-color: var(--color-3);
+}
+
+.bg-4 {
+    background-color: var(--color-4);
+}
+
+.text-l {
+    color: var(--color-w);
+}
+
+.text-d {
+    color: var(--color-d);
+}
+
+.text-1 {
+    color: var(--color-1);
+}
+
+.text-2 {
+    color: var(--color-2);
+}
+
+.text-3 {
+    color: var(--color-3);
+}
+
+.text-4 {
+    color: var(--color-4);
+}
+
+.text-small {
+    font-size: 0.8em;
+}
+/* Botones */
+.btn {
+    font-family: var(--texto-alternativo);
+    transition: var(--efecto-300);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-2);
+    border: 1px solid var(--color-1);
+}
+.btn:focus-visible {
+        box-shadow: var(--sombra-2);
+        border: 1px solid var(--color-1);
+    }
+ .btn:focus {
+        box-shadow: var(--sombra-2);
+        border: 1px solid var(--color-1) !important;
+    }
+.btn_cancel:hover 
+{
+    transform: none!important;
+    transform:scale(1);
+    border: 1px solid var(--color-1);
+}
+
+btn-1:hover 
+{
+    background:var(--color-1)!important;
+}
+btn-2:hover {
+    background: var(--color-2) !important;
+}
+
+btn-3:hover {
+    background: var(--color-3) !important;
+}
+
+btn-4:hover {
+    background: var(--color-4) !important;
+}
+btn-1-hv:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-2);
+    border: 1px solid var(--color-1);
+}
+btn-2-hv:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-2);
+    border: 1px solid var(--color-2);
+}
+btn-3-hv:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-2);
+    border: 1px solid var(--color-3);
+}
+btn-4-hv:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-2);
+    border: 1px solid var(--color-4);
+}
+/* Sombras */
+.som-1 {
+    box-shadow: var(--sombra-1);
+}
+
+.som-2 {
+    box-shadow: var(--sombra-2);
+}
+
+.som-3 {
+    box-shadow: var(--sombra-3);
+}
+/* Formularios */
+.form-control 
+{
+    font-family: var(--texto-alternativo);
+}
+label {
+    font-family: var(--texto-alternativo);
+    font-size: 0.9em;
+    margin-top: 1.1em;
+}
+label.form-check-label 
+{
+        font-family: var(--texto-alternativo);
+        font-size: 0.9em;
+}
+
+.form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 1.5em;
+    margin-bottom: 0.125rem;
+}
+.form-check-input:checked {
+    background-color: var(--color-1);
+    border-color: var(--color-1);
+}
+.form-switch 
+{
+    padding-left: 2.5em;
+}
+.row > label {
+    font-family: var(--texto-alternativo);
+    font-size: 0.9em;
+    margin-top: 1.1em;
+}
+
+input.form-control {
+    font-family: var(--texto-alternativo);
+    font-size: 0.85em;
+}
+
+select.form-select {
+    font-family: var(--texto-alternativo);
+    font-size: 0.85em;
+}
+    input.form-control.invalido {
+        border: 1.5px solid #CC2730;
+    }
+    textarea.form-control.invalido {
+        border: 1.5px solid #CC2730;
+    }
+/* Header y Footer */
+footer {
+    background-color: var(--color-1);
+    color: var(--color-w);
+}
+
+header {
+    background-color: var(--color-2);
+    color: var(--color-w);
+}

@@ -1,0 +1,111 @@
+﻿..sidebar {
+    font-family: var(--texto);
+    transition: all ease-out 1s;
+}
+/* scroll */
+.sidebar::-webkit-scrollbar {
+    width: 6px; /* Tamaño del scroll en vertical */
+}
+/* Ponemos un color de fondo y redondeamos las esquinas del thumb */
+.sidebar::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+    border-radius: 2px;
+}
+
+    /* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+    .sidebar::-webkit-scrollbar-thumb:hover {
+        background: var(--color-4);
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Cambiamos el fondo cuando esté en active */
+    .sidebar::-webkit-scrollbar-thumb:active {
+        background-color: #ccc;
+    }
+
+
+
+/* SubTitulo */
+li.sidebar-title-header {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.sidebar-body > ul > li {
+    list-style: none;
+}
+/* Enlace */
+.sidebar-body ul {
+    padding: 0px;
+}
+
+    .sidebar-body ul li {
+        padding: 10px 15px;
+    }
+
+.sidebar-item a {
+    font-size: 16px;
+    color: var(--color-w);
+}
+
+    .sidebar-item a.sd-lg-7 {
+        padding-right: 7rem;
+    }
+
+    .sidebar-item a.sd-lg-3 {
+        padding-right: 3rem;
+    }
+
+    .sidebar-item a.sd-lg-2 {
+        padding-right: 2.5rem;
+    }
+
+.sidebar-item:hover {
+    background-color: var(--color-3);
+    font-weight: 600;
+    transition: var(--efecto-200);
+}
+
+.sidebar-active {
+    background-color: var(--color-1);
+    border-left: 6px solid var(--color-w);
+    color: var(--color-w) !important;
+    font-weight: 600;
+    transition: var(--efecto-200);
+}
+
+    .sidebar-active a {
+        color: var(--color-w);
+    }
+
+    .sidebar-active:hover {
+        background-color: #235A84;
+        border-left: 6px solid var(--color-w);
+    }
+
+/*Dropdown*/
+.dropdown-menu {
+    --bs-dropdown-link-active-bg: var(--color-2);
+    --bs-dropdown-item-padding-x: 2rem;
+}
+
+.dropdown-divider {
+    margin: 0px;
+}
+
+.dropdown-title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+/* Configuracion */
+#configuracion, #perfil > * {
+    font-size: 0.8em;
+}
+
+    #configuracion .dropdown-item {
+        padding: 10px;
+    }
+
+#perfil .dropdown-item {
+    padding: 10px;
+}
