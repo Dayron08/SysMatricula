@@ -88,7 +88,7 @@
     <div class="sidebar bg-2" id="sidebar">
         <!-- Encabezado -->
         <div class="sidebar-header bg-2 p-3 pb-1">
-            <h3 class="text-white mb-0">ARCAVI<span class="text-4 titulo mb-0">Cloud <i class="fa-solid fa-square" style="font-size: 12px;"></i></span></h3>
+            <h3 class="text-white mb-0">Sistema<span class="text-4 titulo mb-0"> <br> Matr&iacute;cula <i class="fa-solid fa-square" style="font-size: 12px;"></i></span></h3>
             <hr>
         </div>
         <div class="sidebar-body">

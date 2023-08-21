@@ -221,7 +221,8 @@ function validarEmail(valor) {
 
 function EyePass(inputName)
 {
-    $("#passEye").toggleClass("fa-eye fa-eye-slash");
+    $("#passEye2").toggleClass("fa-eye fa-eye-slash");
+    $("#passEye3").toggleClass("fa-eye fa-eye-slash");
     var input = $(`#${inputName}`);
     if (input.attr("type") === "password") {
         input.attr("type", "text");

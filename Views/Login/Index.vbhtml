@@ -42,7 +42,7 @@
 
                 <label for="contrasena"><i class="fa-solid fa-lock"></i> Contraseña</label>
                 <div class="input-group p-0">
-                    <input type="password" class="form-control" placeholder="Contraseña mayor a 8 caracteres" name="pass" id="pass" minlength="8" required>
+                    <input type="password" class="form-control" placeholder="Contraseña mayor a 4 caracteres" name="pass" id="pass" minlength="4" required>
                     <span class="input-group-text bg-white "><i class="fa-regular fa-eye-slash" id="passEye" onclick="EyePass('pass')"></i></span>
                 </div>
                 <div class="d-grid my-4">
@@ -50,8 +50,8 @@
 
                     <button type="submit" class="btn btn-outline-light bg-1 ">Ingresar</button>
                     <div class="Registro mt-3 text-center ">
-                        <span class="text-a text-small d-block">¿No tienes una cuenta?<a href="@Url.Action("RegistrarUsuario","Login")" class="text-3"> Registrate aquí</a></span>
-                        <span class="text-a text-small d-block"><a href="@Url.Action("CambiarContrasena","Login")" class="text-3">¿Olvidaste tu Contraseña?</a></span>
+                        @*<span class="text-a text-small d-block">¿No tienes una cuenta?<a href="@Url.Action("RegistrarUsuario","Login")" class="text-3"> Registrate aquí</a></span>*@
+                        <span class="text-a text-small d-block"><a href="@Url.Action("CambioContrasena", "Login")" class="text-3">¿Olvidaste tu Contraseña?</a></span>
 
                     </div>
 
@@ -61,16 +61,25 @@
         </div>
 
         <div class="col-12 som-2 col-lg-7  bg-1 p-0 d-lg-block d-none" id="img-lateral">
-            <div class="p-4 pb-0">
-                <img src="~/images/arcavi-white.png" id="img-login" class="my-3">
-                <h1 class="display-4">¡Crea una cuenta!</h1>
-                <p class="mb-3">Para disfrutar de todos nuestros servicios</p>
-                <a href="./Registro.html"></a>
-                <a class="btn btn-outline-light px-4" href="@Url.Action("RegistrarUsuario","Login")">Registrarse</a>
-            </div>
-
+            @*<div class="p-4 pb-0">
+                    <img src="~/images/arcavi-white.png" id="img-login" class="my-3">
+                    <h1 class="display-4">¡Crea una cuenta!</h1>
+                    <p class="mb-3">Para disfrutar de todos nuestros servicios</p>
+                    <a href="./Registro.html"></a>
+                    <a class="btn btn-outline-light px-4" href="@Url.Action("RegistrarUsuario","Login")">Registrarse</a>
+                </div>*@
+            <img src="~/img/inicio.png" style="width:540px; height:500px" />
 
         </div>
     </div>
 
 </div>
+
+@Code
+    Dim msj As Integer = 0
+
+    If Session("Msj") IsNot Nothing Then
+        msj = Convert.ToInt32(Session("Msj"))
+    End If
+End Code
+

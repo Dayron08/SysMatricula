@@ -26,8 +26,9 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th>Nombre Completo</th>
+                                        <th>Identificaci&oacute;n</th>
                                         <th>Carnet</th>
+                                        <th>Nombre</th>
                                         <th>Correo</th>
                                         <th>Beca</th>
                                         <th>Tel&eacute;fono</th>
@@ -36,26 +37,9 @@
                                         <th>Opciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tiger Nixon</td>
-                                        <td>System Architect</td>
-                                        <td>Edinburgh</td>
-                                        <td>61</td>
-                                        <td>2011/04/25</td>
-                                        <td>$320,800</td>
-                                        <td style="color:blue">Activo</td>
-                                        <td>
-                                            <a href="#" class="btn btn-warning">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-                                                    <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
-                                                </svg>
-                                            </a><a href="#" class="btn btn-danger">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
-                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
-                                                </svg>
-                                            </a>
-                                    </tr>
+                                <tbody id="listEstudiantes">
+                                  
+                    
                                 </tbody>
                             </table>
                         </div>
@@ -94,12 +78,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="row g-3">
+                <form class="row g-3" action="@Url.Content("~/Estudiantes/Create")" method="post">
 
                     @*<%--txtIdentificacion--%>*@
                     <div class="col-md-6">
                         <label for="txtIdentificacion" class="form-label">Identificacion</label>
-                        <input type="text" class="form-control" id="txtIdentificacion" required>
+                        <input type="text" class="form-control" id="txtIdentificacion" name="txtIdentificacion" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -108,7 +92,7 @@
                     @*<%--txtCarnet--%>*@
                     <div class="col-md-6">
                         <label for="txtCarnet" class="form-label">Carnet</label>
-                        <input type="text" class="form-control" id="txtCarnet" required>
+                        <input type="text" class="form-control" id="txtCarnet" name="txtCarnet" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -116,7 +100,7 @@
                     @*<%--txtnombre--%>*@
                     <div class="col-md-6">
                         <label for="txtNombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="txtNombre" required>
+                        <input type="text" class="form-control" id="txtNombre" name="txtNombre" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -124,7 +108,7 @@
                     @*<%--txtapellido--%>*@
                     <div class="col-md-6">
                         <label for="txtapellidos" class="form-label">Apellidos</label>
-                        <input type="text" class="form-control" id="txtapellidos" required>
+                        <input type="text" class="form-control" id="txtapellidos" name="txtapellidos" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -132,7 +116,7 @@
                     </div> @*<%--NumTelefono--%>*@
                     <div class="col-md-6">
                         <label for="NumTelefono" class="form-label">Telefono</label>
-                        <input type="Number" class="form-control" id="NumTelefono" required>
+                        <input type="text" class="form-control" id="NumTelefono" name="NumTelefono" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -140,7 +124,7 @@
                     @*<%--txtCorreo--%>*@
                     <div class="col-md-6">
                         <label for="txtCorreo" class="form-label">Correo</label>
-                        <input type="email" class="form-control" id="txtCorreo" required>
+                        <input type="email" class="form-control" id="txtCorreo" name="txtCorreo" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -149,7 +133,7 @@
                     @*<%--FchNacimiento--%>*@
                     <div class="col-md-6">
                         <label for="FchNacimiento" class="form-label">Fecha Nacimiento</label>
-                        <input type="date" class="form-control" id="FchNacimiento" required>
+                        <input type="date" class="form-control" id="FchNacimiento" name="FchNacimiento" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -158,7 +142,7 @@
                     @*<%--Float_Beca--%>*@
                     <div class="col-md-6">
                         <label for="Float_Beca" class="form-label">Beca</label>
-                        <input type="Number" class="form-control" id="Float_Beca" required>
+                        <input type="Number" class="form-control" id="Float_Beca" name="Float_Beca" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -167,7 +151,7 @@
                     @*<%--txtCarrerasMatriculadas--%>*@
                     <div class="col-md-6">
                         <label for="selCarrera" class="form-label">Carreras Matriculads</label>
-                        <select class="form-control" id="selCarrera">
+                        <select class="form-control" id="selCarrera" name="selCarrera">
                             <option value="01">RRHH</option>
                             <option value="opcion2">Opción 2</option>
                             <option value="opcion3">Opción 3</option>
@@ -178,7 +162,7 @@
                     @*<%--txtDireccion--%>*@
                     <div class="col-md-6">
                         <label for="txtDireccion" class="form-label">Direccion exacta</label>
-                        <input type="text" class="form-control" id="txtDireccion" required>
+                        <input type="text" class="form-control" id="txtDireccion" name="txtDireccion" required>
                         @*<%--    <div class="valid-feedback">
               Looks good!
             </div>--%>*@
@@ -209,14 +193,6 @@
                         <button type="submit" class="btn btn-primary">
                             Guardar
                         </button>
-
-                        @*@*<%--Checklis--%>*@
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
                     </div>
                 </form>
             </div>
@@ -245,3 +221,52 @@
         </div>
     </div>
 </div>
+
+
+<script>
+
+
+    $(document).ready(() => {
+        $.ajax({
+            type: "POST",
+            url: "/Estudiantes/getEstudiantes",
+            success: (data) => {
+                //alert(JSON.stringify(data))
+
+                $.each(data, (i, val) => {
+                    $('#listEstudiantes').append("<tr>" +
+                        "<td> " + val.Identificacion + "</td>" +
+                        "<td> " + val.Carnet + "</td>" +
+                        "<td> " + val.Nombre + "" + val.Apellidos + "</td>" +
+                        "<td> " + val.Correo + "</td>" +
+                        "<td> " + val.Beca + "</td>" +
+                        "<td> " + val.Telefono + "</td>" +
+                        "<td> " + val.NombreCarrera + "</td>" +
+                        "<td> " + val.Estado + "</td>" +
+                        "<td>"+
+                        "<a href=\"#\" class=\"btn btn - warning\">"+
+                                "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-pencil-fill\" viewBox=\"0 0 16 16\">"+
+                                    "<path d=\"M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z\" />"+
+                                "</svg>"+
+                            "</a><a href=\"#\" class=\"btn btn-danger\">"+
+                                "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-trash-fill\" viewBox=\"0 0 16 16\">"+
+                                    "<path d=\"M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z\" />"+
+                        "</svg>" +
+                        "</a>" +
+                        "</td>" +
+
+                        "</tr >"
+
+                    );
+                });
+            },
+            error: (error) => {
+                console.log(error);
+                return false;
+            }
+        });
+        return true;
+
+    });
+
+</script>
