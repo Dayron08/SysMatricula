@@ -40,6 +40,7 @@ Namespace Views
                                 .Estado = reader("Estado")
                             }
                             query.Add(item)
+
                         End While
                     End Using
                 End Using

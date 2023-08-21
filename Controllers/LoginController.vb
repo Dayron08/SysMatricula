@@ -11,13 +11,7 @@ Namespace Controllers
         Private db As String = ConfigurationManager.AppSettings("DataBase")
         ' GET: Login
         Function Index() As ActionResult
-            Dim sesion_ID_ROL As Integer = Convert.ToInt32(Session("Id_Rol"))
-
-            If sesion_ID_ROL <> 1 Then
-                Return RedirectToAction("Index", "Login")
-            Else
-                Return View()
-            End If
+            Return View()
         End Function
 
         Function CambioContrasena() As ActionResult

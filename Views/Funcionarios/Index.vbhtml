@@ -211,12 +211,13 @@
             data: JSON.stringify(data),
             contentType: 'application/json',
             success: (data) => {
-                alert(JSON.stringify(data))
+ //alert('si'**********************************************************************************)
+                //alert(JSON.stringify(data))
                 if (data==1) {
                     Swal.fire({
                         position: 'center',
                         icon: 'success',
-                        title: "Categor\u00eda eliminada",
+                        title: "Funcionario eliminado",
                         showConfirmButton: false,
                         timer: 1500
                     })
@@ -225,7 +226,7 @@
                     Swal.fire({
                         position: 'center',
                         icon: 'error',
-                        title: "Problemas al realizar la eliminaci\u00F3n",
+                        title: "Funcionario no eliminado",
                         showConfirmButton: false,
                         timer: 1500
                     })
